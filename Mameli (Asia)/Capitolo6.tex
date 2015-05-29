@@ -1,0 +1,109 @@
+\chapter{Calcolo del Google Pagerank}
+\label{chap:Google}
+
+\subsection{Esercizio 1}
+\label{sub:Es1}
+[Teorema di Gershgorin]
+      Dimostrare che gli autovalori di una matrice
+      $A=(a_{ij})\in\mathbb{C}^{n n}$
+      \emph{sono contenuti nell'insieme}
+			\[
+				\mathcal{D}=\bigcup_{i=1}^n\mathcal{D}_i,\qquad \mathcal{D}_i=\left\{\lambda\in\mathbb{C}:|\lambda-a_{ii}|\leq\sum_{\begin{subarray}{c}
+					j=1\\
+					j\neq i
+				\end{subarray}}^n|a_{ij}|\right\},\quad i=1,\dots,n.
+			\]
+
+\subsection{Esercizio 2}
+\label{sub:Es2}
+\emph{
+      Utilizzare il metodo delle potenze per approssimare l'autovalore dominante della matrice
+			\[
+				A_n=\begin{pmatrix}
+					2 & -1 & &\\
+					-1 & 2 & \ddots &\\
+					& \ddots & \ddots & -1\\
+					& & -1 & 2
+				\end{pmatrix}\in\mathbb{R}^{n\times n},
+			\]
+			per valori crescenti di $n$. Verificare numericamente che questo è dato da $2\left(1+\cos\frac{\pi}{n+1}\right)$.
+}
+
+\subsection{Esercizio 3}
+\label{sub:es3}
+\emph{Dimostrare i Corollari 6.2 e 6.3.}
+
+\subsection{Esercizio 4}
+\label{sub:es4}
+\emph{Dimostrare il Teorema 6.9.}
+
+\subsection{Esercizio 5}
+\label{sub:es5}
+\emph{Tenendo conto della (6.10), riformulare il metodo delle potenze (6.11) per il calcolo del \textit{Google pagerank} come metodo iterativo definito da uno splitting regolare.}
+
+\subsection{Esercizio 6}
+\label{sub:es6}
+\emph{Dimostrare che il metodo di Jacobi converge asintoticamente in un numero minore di iterazioni, rispetto al metodo delle potenze (6.11) per il calcolo del \textit{Google pagerank}.}
+
+\subsection{Esercizio 7}
+\label{sub:es7}
+\emph{Dimostrare che, se $A$ è diagonale dominante, per riga o per colonna, il metodo di Jacobi è convergente.}
+
+\subsection{Esercizio 8}
+\label{sub:es8}
+\emph{Dimostrare che, se $A$ è diagonale dominante, per riga o per colonna, il metodo di Gauss-Seidel è convergente.}
+
+\subsection{Esercizio 9}
+\label{sub:es9}
+\emph{Se $A$ è \textit{sdp}, il metodo di Gauss-Seidel risulta essere convergente.
+      Dimostrare questo risultato nel caso (assai più semplice) in cui l'autovalore di massimo modulo della matrice di iterazione sia reale.\\
+			(\underline{Suggerimento:} considerare il sistema lineare equivalente
+			$$(D^{-\frac{1}{2}}AD^{-\frac{1}{2}})(D^{\frac{1}{2}}\underline{x})=(D^{-\frac{1}{2}}\underline{b}),\qquad D^{\frac{1}{2}}=diag(\sqrt{a_{11}},\dots,\sqrt{a_{nn}}),$$
+			la cui matrice dei coefficienti è ancora \textit{sdp} ma ha diagonale unitaria,
+      ovvero del tipo $I-L-L^T$. Osservare quindi che, per ogni vettore reale $\underline{v}$ di norma $1$,si ha:
+      $\underline{v}^TL\underline{v}=\underline{v}^TL^T\underline{v}=\frac{1}{2}\underline{v}^T(L+L^T)\underline{v}<\frac{1}{2}$.)}
+
+\subsection{Esercizio 10}
+\label{sub:es10}
+\emph{Con riferimento ai vettori errore (6.16) e residuo (6.17) dimostrare che, se
+			\begin{equation}
+				\label{criterioArrestoSplitting}
+				||\underline{r_k}||\leq\varepsilon||\underline{b}||,
+			\end{equation}
+			allora
+			$$||\underline{e_k}||\leq\varepsilon k(A)||\underline{\hat{x}}||,$$
+			dove $k(A)$ denota, al solito, il numero di condizionamento della matrice $A$.
+      Concludere che, per sistemi lineari malcondizionati, anche la risoluzione iterativa (al pari di quella diretta) risulta essere più problematica.}
+
+\subsection{Esercizio 11}
+\label{sub:es11}
+\emph{Calcolare il polinomio caratteristico della matrice
+			\[
+				\begin{pmatrix}
+					0 & \dots & 0 & \alpha\\
+					1 & \ddots & & 0\\
+					& \ddots & \ddots & \vdots\\
+					0 & & 1 & 0
+				\end{pmatrix}\in\mathbb{R}^{n\times n}.
+			\]}
+
+\subsection{Esercizio 12}
+\label{sub:es12}
+\emph{Dimostrare che i metodi di Jacobi e Gauss-Seidel possono essere utilizzati per la risoluzione del sistema lineare (gli elementi non indicati sono da intendersi nulli)
+			\[
+				\begin{pmatrix}
+					1 & & & -\frac{1}{2}\\
+					-1 & 1 & &\\
+					& \ddots & \ddots &\\
+					& & -1 & 1
+				\end{pmatrix}\underline{x}=\begin{pmatrix}
+					\frac{1}{2}\\
+					0\\
+					\vdots\\
+					0
+				\end{pmatrix}\in\mathbb{R}^n,
+			\]
+			la cui soluzione è $\underline{x}=(1,\dots,1)^T\in\mathbb{R}^n$.
+      Confrontare il numero di iterazioni richieste dai due metodi per soddisfare lo stesso criterio di arresto (6.19),
+      per valori crescenti di $n$ e per tolleranze $\varepsilon$ decrescenti. Riportare i risultati ottenuti in una tabella $(n/\varepsilon)$.
+      }
