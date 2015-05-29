@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.4.26)  29 MAY 2015 00:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.4.26)  29 MAY 2015 09:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -417,17 +417,31 @@ ne 67.
 
 
 No file Capitolo4.tex.tex.
+(./Capitolo5.tex
+Capitolo 5.
+[23
+
+
+
+]) [24]
+\openout2 = `Capitolo5.tex.aux'.
+
+
+No file Capitolo5.tex.tex.
 (./Elaborato.aux (./Capitolo1.tex.aux) (./Capitolo2.tex.aux)
-(./Capitolo3.tex.aux) (./Capitolo4.tex.aux))
+(./Capitolo3.tex.aux) (./Capitolo4.tex.aux) (./Capitolo5.tex.aux))
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 6892 strings out of 493117
- 92268 string characters out of 6135433
+ 6908 strings out of 493117
+ 92472 string characters out of 6135433
  203536 words of memory out of 5000000
- 10221 multiletter control sequences out of 15000+600000
+ 10232 multiletter control sequences out of 15000+600000
  13933 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  51i,9n,58p,802b,1609s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -452,10 +466,10 @@ ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/
 exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2014/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2014/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on Elaborato.pdf (22 pages, 262693 bytes).
+Output written on Elaborato.pdf (24 pages, 266259 bytes).
 PDF statistics:
- 160 PDF objects out of 1000 (max. 8388607)
- 113 compressed objects within 2 object streams
+ 166 PDF objects out of 1000 (max. 8388607)
+ 117 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
