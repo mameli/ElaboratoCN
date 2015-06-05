@@ -1,5 +1,7 @@
 \chapter{Calcolo del Google Pagerank}
 \label{chap:Google}
+\section{Esercizi del libro}
+\label{sec:Esercizi del libro}
 
 \subsection{Esercizio 1}
 \label{sub:Es1}
@@ -24,6 +26,7 @@
    $$\left|\lambda-a_{i,i}\right|=\left|\sum_{j=1\: j\neq i}^n{a_{i,j}\frac{x_j}{x_i}}\right|\leq\sum_{j=1\: j\neq i}^n{\left|a_{i,j}\frac{x_j}{x_i}\right|}\leq\sum_{j=1\: j\neq i}^n{\left|a_{i,j}\right|}$$ poiché $\left|\frac{x_j}{x_i}\right|\leq 1$
    in quanto $|x_i|\geq|x_j|$. Segue $\lambda\in\bigcup_{i=1}^{n}{\mathcal{D}_i}$ da cui $\sigma{A}\subseteq\mathcal{D}$.
 \end{sol}
+
 \subsection{Esercizio 2}
 \label{sub:Es2}
 \emph{
@@ -45,6 +48,9 @@
   Risulta $\lambda_j(B_n)=\cos{\frac{j\pi}{n+1}}$, $|\lambda_j|\leq 1$, per $j=1,\ldots,n$;
   segue $\lambda_j(A_n)=2(\lambda_j(I_n)-\lambda_j(B_n))=2(1-\cos{\frac{j\pi}{n+1}})$; il massimo è $\lambda=2(1+\cos{\frac{\pi}{n+1}})$.
   La verifica numerica di questo risultato è riportata nelle seguenti tabelle.
+  Codice:\\
+  \lstinputlisting[caption={Esercizio 6.2}, label=lst:es6.2]{code/es6_2.m}
+  \vspace{0.5em}
   \begin{center}\begin{tabular}{c|c|c|c}
     \hline\multicolumn{4}{c}{Tolleranza $tol=10^{-5}$}\\\hline
     $n$ & $\lambda_1$ & $2\left(1+\cos{\frac{\pi}{n+1}}\right)$ & scostamento\\\hline
@@ -266,9 +272,13 @@
         $|\lambda|<1$, $\rho(B)<1$ quindi $A$ è una M-matrice ed è possibile risolvere il sistema lineare tramite i metodo iterativi
         di Jacobi e Gauss-Seidel in quando lo splitting è regolare ed $A$ converge.\\
         Implementando il criterio d'arresto $||\underline{r}_k||\leq\varepsilon||\underline{b}||$, si ha convergenza nel numero di iterazioni riportate nelle seguenti tabelle:
+        Codice:\\
+        \lstinputlisting[caption={Esercizio 6.12.}, label=lst:es6.12]{code/es6_12.m}
+        \vspace{0.5em}
         \footnotesize
         \begin{center}\begin{tabular}{|c||c|c|c|c|c|c|c|c|c|c|}
-        \hline\multicolumn{11}{c}{Iterazioni del metodo di Jacobi}\\\hline
+        \multicolumn{11}{c}{Iterazioni del metodo di Jacobi}\\
+        \hline
         $n \backslash \varepsilon $ & $10^{-1}$& $10^{-2}$& $10^{-3}$& $10^{-14}$& $10^{-5}$& $10^{-6}$& $10^{-7}$& $10^{-8}$& $10^{-9}$& $10^{-10}$\\\hline
         5& 25 & 34 & 54 & 74 & 85 & 105 & 124 & 139 & 157 & 171 \\\hline
         10& 50 & 72 & 116 & 145 & 181 & 211 & 250 & 276 & 304 & 342 \\\hline
@@ -282,7 +292,8 @@
         50& 299 & 458 & 622 & 787 & 963 & 1108 & 1290 & 1473 & 1630 & 1789 \\\hline
         \end{tabular}\end{center}
         \begin{center}\begin{tabular}{|c||c|c|c|c|c|c|c|c|c|c|}
-        \hline\multicolumn{11}{c}{Iterazioni del metodo di Gauss-Seidel}\\\hline
+        \multicolumn{11}{c}{Iterazioni del metodo di Gauss-Seidel}\\
+        \hline
         $n \backslash \varepsilon $ & $10^{-1}$& $10^{-2}$& $10^{-3}$& $10^{-14}$& $10^{-5}$& $10^{-6}$& $10^{-7}$& $10^{-8}$& $10^{-9}$& $10^{-10}$\\\hline
         5 & 3 & 7 & 10 & 13 & 17 & 20 & 22 & 26 & 30 & 33 \\\hline
         10 & 1 & 6 & 10 & 13 & 16 & 20 & 23 & 26 & 27 & 33 \\\hline

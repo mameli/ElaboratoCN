@@ -1,0 +1,64 @@
+\documentclass[a4paper, 10pt]{book}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[italian]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{mathtools}
+\usepackage{epigraph}
+\usepackage{listings}
+\usepackage{amsfonts, mathtools, placeins, floatflt, xfrac, multirow, indentfirst, fancyhdr,
+            amssymb, latexsym, amsthm, eucal, float, tabularx, mdframed, bigdelim, blkarray,
+            relsize, lettrine, xcolor, tikz, caption, geometry, perpage}
+\usepackage[Sonny]{fncychap}
+
+
+
+
+
+
+
+
+
+
+\lstloadlanguages{Matlab, Fortran}
+\lstset{
+  language = Matlab,
+  frameround = fttt,
+  frame = single,
+  numbers = left,
+  stepnumber = 2,
+  breaklines = true,
+  numberstyle=\tiny\color{gray},
+}
+
+
+\title{ELABORATO DI CALCOLO NUMERICO}
+\author{Federico Schipani \\ Tommaso Ceccarini \\ Giuliano Gambacorta \\}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\cleardoublepage
+
+\thispagestyle{empty}
+\vspace{\stretch{1}}
+\begin{flushright}
+\epigraph{L'errore assoluto da un informazione relativa, l'errore relativo da un informazione assoluta!}{Sestini, Brugnano, Magherini}
+\end{flushright}
+\vspace{\stretch{2}}
+\cleardoublepage
+\input{Capitolo1.tex}
+\include{Capitolo1.tex}
+\input{Capitolo2.tex}
+\include{Capitolo2.tex}
+\input{Capitolo3.tex}
+\include{Capitolo3.tex}
+\input{Capitolo4.tex}
+\include{Capitolo4.tex}
+\input{Capitolo5.tex}
+\include{Capitolo5.tex}
+\input{Capitolo6.tex}
+\include{Capitolo6.tex}
+\end{document}

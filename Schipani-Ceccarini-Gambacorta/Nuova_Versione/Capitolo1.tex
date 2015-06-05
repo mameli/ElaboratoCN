@@ -1,0 +1,199 @@
+\chapter{Errori ed aritmetica finita}
+\section{Esercizi del libro}
+Qua ci sono gli esercizi contenuti del libro
+\subsection{Esercizio 1.1}
+\emph{Sia $ x = \pi \approx 3.1415 = \tilde{x} $. Calcolare il corrispondente errore relativo $\epsilon_{x}$.
+Verificare che il numero di cifre decimali corrette nella rappresentazione approssimata di x mediante $\tilde{x}$ è all'incirca dato da}  \\
+
+\center$-\log_{10}|\epsilon_{x}|$
+\flushleft \underline{Soluzione:}\\
+\center
+$ x = \pi \approx 3.1415, \qquad \tilde{x} = 3.1415 $ \\ \vspace{1ex}
+$ \Delta_{x} = x - \tilde{x} = 0,0000926$ \\ \vspace{1ex}
+$ \epsilon_{x} = \frac{\Delta_{x}}{x} = 0,3 \cdot 10^{-4} $\\ \vspace{1ex}
+$ -log_{10} | \epsilon_{x} | = -log_{10} | 0,3 \cdot 10^{-4} | \approx 4,5  $\\ \vspace{1ex}
+\flushleft Arrotondando $ 4,5 $ si nota che il numero delle cifre decimali corrette nella rappresentazione è 4
+
+\subsection{Esercizio 1.2}
+\emph{Dimostrare che, se $f(x)$ è sufficientemente regolare e $ h> 0 $ è una quantità "piccola", allora:}
+\center$\frac{f(x_{0}+h)-f(x_{0}-h)}{2h} = f'(x_{0})+O(h^2)$ \\
+\vspace{1em}
+$\frac{f(x_{0}+h)-2f(x_{0})+f(x_{0}-h)}{h^2} = f''(x_{0})+O(h^2) $
+\flushleft
+
+\subsection{Esercizio 1.3}
+\emph{Dimostrare che il metodo iterativo $(1.1) $, convergente a $ x^* \ (vedi(1.2)) $, deve verificare la condizione di consistenza}
+$$ x^* =  \Phi(x^*)$$
+\emph{Ovvero la soluzione cercata deve essere un \underline{punto fisso} per la funzione di iterazione che definisce il metodo.}
+
+\subsection{Esercizio 1.4}
+
+\emph{Il metodo iterativo}
+
+$$x_{n+1} = \frac{x_{n}x_{n-1}+2}{x_{n}+x_{n-1}}, \qquad n = 1, 2, ..., x_{0} = 2,\qquad x_{1} = 1.5 $$
+
+\emph{definisce una successione di approssimazioni convergente a} $\sqrt{2}$. \emph{Calcolare a quale valore di $ n $ bisogna arrestare l'iterazione, per avere un errore di convergenza}
+$\approx 10^{-22}$ \emph{(comparare con i risultati in Tabella 1.1)}
+
+\subsection{Esercizio 1.5}
+\emph{Il codice Fortran}
+\lstinputlisting[language=Fortran, frame=none, stepnumber=0, nolol=true]{code/fortran1_5.txt}
+\emph{Produce il seguente output:}
+\begin{enumerate}
+\item $32765$
+\item $32766$
+\item $32767$
+\item $-32768$
+\item $-32767$
+\item $-32766$
+\item $-32765$
+\item $-32764$
+\item $-32763$
+\item $-32762$
+\end{enumerate}
+\emph{Spiegarne il motivo}
+
+
+\subsection{Esercizio 1.6}
+\emph{Dimostrare i teoremi 1.1 e 1.3}
+\subsection{Esercizio 1.7}
+\emph{Completare la dimostrazione del teorema 1.4}
+
+\subsection{Esercizio 1.8}
+\emph{Quante cifre binarie sono utilizzate per rappresentare, mediante arrotondamento, la mantissa di un numero, sapendo che la precisione di machina è $ u \approx 4.66 \cdot 10^{-10} $}
+
+\subsection{Esercizio 1.9}
+\emph{Dimostrare che, detta $ u $ la precisione di macchina utilizzata, \\
+\center{$-log_{10} u $}
+\flushleft fornisce, approssimativamente, il numero di cifre decimali correttamente rappresentate dalla mantissa.}
+
+\subsection{Esercizio 1.10}
+Con riferimento allo standard IEEE 754 determinare, relativamente alla doppia precisione:\\
+\begin{enumerate}
+  	\item il più grande numero di macchina
+  	\item il più piccolo numero di macchina normalizzato positivo
+	\item il più piccolo numero di macchina denormalizzato positivo
+	\item la precisione di macchina
+\end{enumerate}
+Confrontare le risposte ai primi due quesiti col risultato fornito dalle $\mathtt{function}$ $Matlab$ $\mathtt{realmax}$ e $\mathtt{realmin}$
+
+\subsection{Esercizio 1.11}
+\emph{Eseguire le seguenti istruzioni $Matlab$:}
+
+\lstinputlisting[frame=none, stepnumber=0, nolol=true]{code/matlab1_11.m}
+\emph{Spiegarne il (non) funzionamento}
+
+\subsection{Esercizio 1.12}
+\emph{Individuare l'algoritmo più efficace per calcolare, in aritmetica finita, l'espressione $\sqrt{x^{2} + y^{2}}$}
+
+\subsection{Esercizio 1.13}
+\emph{Eseguire le seguenti istruzioni $Matlab$:}
+
+\lstinputlisting[frame=none, stepnumber=0, nolol=true]{code/matlab1_13.m}
+\emph{Concludere che la somma algebrica non gode, in aritmetica finita, della proprietà associativa.}
+
+\subsection{Esercizio 1.14}
+\emph{Eseguire e discutere il risultato delle seguenti istruzioni $Matlab$}
+\emph{\center $(1e300-1e300)*1e300$, \qquad $(1e300*1e300)-(1e300*1e300)$}
+\flushleft
+
+\subsection{Esercizio 1.15}
+\emph{Eseguire l'analisi dell'errore (relativo), dei due seguenti algoritmi per calcolare la somma di tre numeri:}
+\center 1) $ (x\oplus y) \oplus z) $, \qquad 2) $x\oplus(y\oplus z)$
+\flushleft
+
+\subsection{Esercizio 1.17}
+\emph{(Cancellazione numerica) Si supponga di dover calcolare l'espressione }
+\center $ y = 0.12345678-0.12341234 \equiv 0.0000444$,
+\flushleft utilizzando una rappresentazione decimale con arrotondamento alla quarta cifra significativa. Comparare il risultato esatto con quello ottenuto in aritmetica finita, e determinare la perdita di cifre significative derivante dalla operazione effettuata. Verificare che questo risultato è in accordo con l'analisi di condizionamento.
+
+\subsection{Esercizio 1.18}
+\emph{(Cancellazione Numerica) Eseguire le seguenti istruzioni $Matlab$}
+
+\lstinputlisting[frame=none, stepnumber=0, nolol=true]{code/matlab1_18.m}
+\emph{Valutare l'errore relativo sui dati di ingresso e l'errore relativo sul risultato ottenuto.}
+
+\section{Esercizi integrativi}
+Questi sono gli esercizi integrativi sul capitolo 1
+
+
+\subsection{Esercizio 1}
+\emph{ un'approssimazione del secondo ordine di $f'(x_{0})$ utilizzando il passo di discretizzazione $ h $ e i seguenti tre valori di funzione $ f(x_{0}), f(x_{0}+h), f(x_{0}+2h) $ (molecola a tre punti in avanti).}
+
+\subsection{Esercizio 2}
+\emph{Dimostrare che se un numero reale $x $ viene approssimato da $\tilde{x}$ con un certo errore relativo $\epsilon_{x}$, la quantità $-log_{10}|\epsilon_{x}|$ fornisce approssimativamente il numero di cifre decimali esatte di $\tilde{x}$.}
+
+\subsection{Esercizio 3}
+\emph{Calcolare il più grande e il più piccolo numero reale di macchina positivo normalizzato che si può rappresentare utilizzando lo standard IEEE 754 nel formato della singola precisione e in quello della doppia precisione.}\\
+\underline{Soluzione:}\\
+Il numero più piccolo è uguale a: $$R_{1} = b^{\nu} $$ \\
+Per cui nel caso di questo esercizio: $$2^{-126}$$\\
+Il numero più grande è uguale a $$R_{2} = (1-2^{-24}) 2^{\varphi} $$ con $$ \varphi = 2^{8}-127 $$ quindi $$ R_{2} = 6.805646933 \cdot 10^{38}$$.
+
+\subsection{Esercizio 4}
+\emph{Siano $ x = 2.7352 \cdot 10^{2}, y = 4.8017 \cdot 10^{-2}$ e $z = 3.6152 \cdot 10^{-2}$. Utilizzando un'aritmetica finita che lavora in base 10 con arrotondamento e che riserva $ m = 4 $ cifre alla mantissa, confrontare gli errori assoluti $ R_{1}-R$ e $R_{2}-R$, dove $ R = x+y+z$ e \\}
+\center{$R_{1} = (x \oplus y) \oplus z, \qquad  R_{2} = x \oplus ( y \oplus z).$} \\
+\flushleft
+\underline{Soluzione:}\\
+Per facilitare i calcoli si portano $ x $ e $ y $ da $ 10 ^ {-2} $ a $ 10^{2} $:\\
+$$ y = 4.8017 \cdot 10^{-2} = 0.00048017 \cdot 10^{2} $$ \\
+$$ z = 3.6152 \cdot 10^{-2} = 0.00031652 \cdot 10^{2} $$ \\
+Successivamente si calcola $R_{1}$, $R_{2}$ ed $R$:\\
+$$ R_{1} = (x \oplus y) \oplus z)  = (2.7352 + 0.00048017) + 0.00031652 = 2,7359 \cdot 10^{2}$$\\
+$$ R_{2} = x \oplus ( y \oplus z) = 2.7352 + (0.00048017 + 0.00031652) = 2.7360 \cdot 10^{2} $$ \\
+$$ R = x+y+z = 2.73604169 $$ \\
+Attraverso R si calcolano gli errori assoluti su $R_{1}$ ed $R_{2}$: \\
+$$R_{1}-R = -0.000014169 \cdot 10^{2} $$\\
+$$R_{2}-R = 0.000004169 \cdot 10^{2} $$ \\
+
+
+\subsection{Esercizio 5}
+\emph{Un'aritmetica finita utilizza la base 10, l'arrotondamento, $m = 5$ cifre per la mantissa, $s = 2$ cifre per l'esponente e lo shift $\nu = 50$. Per gli interi esso utilizza $N = 7$ cifre decimali. Dire se il numero intero $x = 136726$ è un numero intero di macchina e come viene convertito in reale di macchina. Dire quindi se il numero intero $x = 78345 \cdot 10^{40} $ un reale di macchina e/o se è un intero di macchina.}
+\\
+\underline{Soluzione:}\\
+Si verifica facilmente che il numero $ x = 136726$ è un intero di macchina. \\
+Il numero $ x $ viene convertito in reale di macchina in questo modo: $x_{r} = 1,36726 \cdot 10^{5} $\\
+Invece il numero $ x = 78345 \cdot 10^{40} $ è un reale di macchina in quanto non bastano 5 cifre per rappresentarlo.\\
+Per un maggiore sicurezza si calcola il più grande reale di macchina:\\ $$ R_{2} = (1-10^{-5}) 10^{50} = 9.9999 \cdot 10^{49} $$\\
+Essendo $x < R_{2} $ è confermato che è un reale di macchina.
+
+
+\subsection{Esercizio 6}
+\emph{Dimostrare che il numero di condizionamento del problema di calcolo $ \sqrt[n]{x} $ è $\frac{1}{n}$.\\}
+\underline{Soluzione:} \\
+Per prima cosa si riscrive la funzione:\\ $$f(x) = x^{\frac{1}{n}}$$\\
+Il numero di condizionamento è uguale a $$\kappa = \lvert f'(x) \frac{x}{y} \rvert $$\\
+Si calcola la derivata di $ f(x) $ che è uguale a \\ $$ f'(x) = \frac{x^ { \frac{1}{n}-1 } }{n}$$\\
+Quindi: \\ $$ \kappa = \lvert \frac{x^{\frac{1}{n}-1}}{n} \frac{x}{\sqrt[n]{x} }\rvert$$ \\
+Da cui con passaggi algebrici:\\
+$$\lvert \frac{\sqrt[n]{x} \hspace{1ex} x^{-1}}{n} \frac{x}{\sqrt[n]{x} } \rvert = \lvert \frac{1}{n} \rvert = \frac{1}{n} $$.
+
+\subsection{Esercizio 7}
+\emph{Individuare l'algoritmo più efficace per valutare, in aritmetica finita, la funzione $f(x)=\ln{x^{4}}$\\}
+\underline{Soluzione:} \\
+Bisogna semplicemente riscrivere la funzione per evitare problemi di overflow e underflow e poi valutarla.
+$f(x) = \ln{x^{4}} = 4 \cdot \ln{x}$ \\
+L'algoritmo è questo: \\
+SCRIVERE ALGORITMO
+
+\subsection{Esercizio 8}
+\emph{Individuare una forma algebrica equivalente ma preferibile in aritmetica finita per il calcolo dell'espressione $ (x+2)^{3} - x^{3}$\\}
+\underline{Soluzione:}\\
+$$(x+2)^{3}-x^{3} = (x+2)(x+2)^{2} - x^{3} = (x+2)(x^{2}+4x+4)-x^{3} = x^{3} +4x^{2}+4x+2x^{2}+8x+8-x^{3} = 6x^{2} +12x+8 $$
+
+\subsection{Esercizio 9}
+\emph{Si calcoli l'approssimazione $\tilde{y}$ della differenza tra $ y$ fra $x_{2} = 3.5555$ e $x_{1} = 3.5554$ utilizzando un'aritmetica finita che lavora con arrotondamento in base 10 con 4 cifre per la mantissa normalizzata. Se ne calcoli quindi il corrispondente errore relativo e la maggiorazione di esso che si ottiene utilizzando il numero di condizionamento della somma algebrica.\\}
+\underline{Soluzione:}\\
+Prima si calcola un'approssimazione di $x_{1}$ e $x_{2}$ poi si calcola un approssimazione $\tilde{y}$ della differenza $y$.
+$$\tilde{x_{1}} = 3.555$$\\
+$$\tilde{x_{2}} = 3.556$$\\
+$$\tilde{y} = \tilde{x_{1}} - \tilde{x_{2}} = 0.001$$\\
+$$ y = x_{2}-x_{1} = 0.0001$$\\
+L'errore relativo è uguale a: $\varepsilon_{y} = \frac{0.001-0.0001}{0.0001} = 9$\\
+Per la maggiorazione serve  $max \{ \lvert \varepsilon_{x_{1}} \rvert, \lvert \varepsilon_{x_{2}} \rvert  \}$\\
+$$\varepsilon_{x_{1}} = \frac{\tilde{x_{1}}-x_{1}}{x_{1}} = -1.125 \cdot 10^{-4}$$\\
+$$\varepsilon_{x_{2}} = \frac{\tilde{x_{2}}-x_{2}}{x_{2}} = 1.406 \cdot 10^{-4}$$\\ %SOSTITUIRE LA CAZZO DI K
+Quindi:\\ $$ k = \frac{ \lvert -3.5554 \rvert + \lvert 3.5555 \rvert}{\lvert 3.5555-3.5554\rvert} \cdot 1.406 \cdot 10^{-4} = 9.9979254 $$
+
+\subsection{Esercizio 10}
+\emph{Dimostrare che il numero razionale $ 0.1$  (espresso in base 10) non può essere un numero di macchina in un'aritmetica finita che utilizza la base 2 indipendentemente da come viene fissato il numero $\mathit{m}$ di bit riservati alla mantissa. Dare una maggiorazione del corrispondente errore relativo di rappresentazione supponendo di utilizzare l'aritmetica finita binaria che utilizza l'arrotondamento e assume $ \mathit{m} = 7$.}
