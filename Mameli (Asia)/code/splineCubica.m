@@ -7,7 +7,7 @@
 %   -fi: vettore contenente i valori assunti dalla funzione da
 %   approssimare nei nodi in ptx;
 %   -nak: true se la spline implementa condizioni not-a-knot, false se
-%   invece � una spline naturale.
+%   invece e' una spline naturale.
 % Output:
 %   -s: il vettore contenente le n espressioni dei polinomi costituenti
 %   la spline.

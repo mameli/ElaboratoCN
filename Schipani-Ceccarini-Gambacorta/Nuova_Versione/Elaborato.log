@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.11.4)  3 JUN 2015 21:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.11.4)  5 JUN 2015 11:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1112,59 +1112,51 @@ Package: fncychap 2007/07/30 v1.34 LaTeX package (Revised chapters)
 \pyy=\skip147
 \pxx=\skip148
 )
+
+! LaTeX Error: File `ornament.sty' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
+
+Enter file name: pgfornament.sty
+(/Users/federicoschipani/Library/texmf/tex/latex/pgfornament.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pgfopts/pgfopts.sty
+Package: pgfopts 2011/06/02 v2.1 LaTeX package options with pgfkeys
+\pgfopts@list@add@a@toks=\toks51
+\pgfopts@list@add@b@toks=\toks52
+)
+
+LaTeX Warning: You have requested package `ornament',
+               but the package provides `pgfornament'.
+
+Package: pgfornament 2014/05/31 v0.11 vector ornaments
+(/Users/federicoschipani/Library/texmf/tex/latex/pgflibraryvectorian.code.tex))
 (/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/03/04 1.5c listings language file
 )
-(./Elaborato.aux (./Capitolo1.tex.aux) (./Capitolo2.tex.aux)
-(./Capitolo3.tex.aux) (./Capitolo4.tex.aux) (./Capitolo5.tex.aux)
-
-LaTeX Warning: Label `sub:es3' multiply defined.
-
-
-LaTeX Warning: Label `sub:es4' multiply defined.
-
-
-LaTeX Warning: Label `sub:es5' multiply defined.
-
-
-LaTeX Warning: Label `sub:es6' multiply defined.
-
-
-LaTeX Warning: Label `sub:es7' multiply defined.
-
-
-LaTeX Warning: Label `sub:es8' multiply defined.
-
-
-LaTeX Warning: Label `sub:es9' multiply defined.
-
-
-LaTeX Warning: Label `sub:es10' multiply defined.
-
-(./Capitolo6.tex.aux))
+No file Elaborato.aux.
 \openout1 = `Elaborato.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 39.
-
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 36.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 36.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Info: Redefining \it@ocap on input line 39.
-LaTeX Info: Redefining \it@ccap on input line 39.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Info: Redefining \it@ocap on input line 36.
+LaTeX Info: Redefining \it@ccap on input line 36.
 
 
 File italian.ldf warning: 
@@ -1172,7 +1164,7 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
-italian.ldf    on input line 39.
+italian.ldf    on input line 36.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
@@ -1186,12 +1178,12 @@ File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 \scratchbox=\box73
 \nofMPsegments=\count197
 \nofMParguments=\count198
-\everyMPshowfont=\toks51
+\everyMPshowfont=\toks53
 \MPscratchCnt=\count199
 \MPscratchDim=\dimen315
 \MPnumerator=\count200
 \makeMPintoPDFobject=\count201
-\everyMPtoPDFconversion=\toks52
+\everyMPtoPDFconversion=\toks54
 ) (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -1247,16 +1239,16 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 40.
+LaTeX Font Info:    Try loading font information for U+msa on input line 37.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 40.
+LaTeX Font Info:    Try loading font information for U+msb on input line 37.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 40.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 37.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
@@ -1265,14 +1257,14 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 
 {/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
 
-] (./Elaborato.toc
-[3] [4])
+]
+No file Elaborato.toc.
 \tf@toc=\write4
 \openout4 = `Elaborato.toc'.
 
- [5] [6] [7
+[3] [4
 
-] [8
+] [5] [6
 
 ] (./Capitolo1.tex
 Capitolo 1.
@@ -1283,13 +1275,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
  []
 
-[9
+[7
 
 ] (/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/03/04 1.5c listings language file
 )
-(./code/fortran1_5.txt) [10] (./code/matlab1_11.m) (./code/matlab1_13.m)
-[11] (./code/matlab1_18.m) [12] [13] [14]
+(./code/fortran1_5.txt) [8] (./code/matlab1_11.m) (./code/matlab1_13.m)
+[9] (./code/matlab1_18.m) [10] [11] [12]
 Overfull \hbox (27.6981pt too wide) detected at line 182
 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 + 2)[] \OMS/cmsy/m/n/10 ^^@
  \OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 = (\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 + 2
@@ -1303,29 +1295,29 @@ n/10 + 2\OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 + 8\OML/cmm/m/it/10 x \OT1/cmr/m/n
 /it/10 x[] \OT1/cmr/m/n/10 + 12\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 + 8
  []
 
-) [15] [16]
+) [13] [14]
 \openout2 = `Capitolo1.tex.aux'.
 
 
 No file Capitolo1.tex.tex.
 (./Capitolo2.tex
 Capitolo 2.
-[17
+[15
 
 
 
-]) [18]
+]) [16]
 \openout2 = `Capitolo2.tex.aux'.
 
 
 No file Capitolo2.tex.tex.
 (./Capitolo3.tex
 Capitolo 3.
-[19
+[17
 
 
 
-] [20] (./code/matlab3_24.m
+] [18] (./code/matlab3_24.m
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 2.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
@@ -1333,39 +1325,39 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2.
- [21])
+ [19])
 
-LaTeX Warning: Reference `es:3.25' on page 22 undefined on input line 93.
+LaTeX Warning: Reference `es:3.25' on page 20 undefined on input line 93.
 
-(./code/matlab3_26.m) [22] (./code/matlab3_32a.m) (./code/matlab3_32b.m)
-[23]) [24]
+(./code/matlab3_26.m) [20] (./code/matlab3_32a.m) (./code/matlab3_32b.m)
+[21]) [22]
 \openout2 = `Capitolo3.tex.aux'.
 
 
 No file Capitolo3.tex.tex.
 (./Capitolo4.tex
 Capitolo 4.
-[25
+[23
 
 
 
 ] (./code/matlab4_7.m)
 
-LaTeX Warning: Reference `ascisseEquidistanti' on page 26 undefined on input li
+LaTeX Warning: Reference `ascisseEquidistanti' on page 24 undefined on input li
 ne 61.
 
-[26] [27]) [28]
+[24] [25]) [26]
 \openout2 = `Capitolo4.tex.aux'.
 
 
 No file Capitolo4.tex.tex.
 (./Capitolo5.tex
 Capitolo 5.
-[29
+[27
 
 
 
-] (./code/trapeziComposita.m) (./code/simpsonComposita.m [30])
+] (./code/trapeziComposita.m) (./code/simpsonComposita.m [28])
 (./code/trapeziAdattativa.m
 LaTeX Font Info:    Try loading font information for OML+cmr on input line 11.
 
@@ -1375,14 +1367,14 @@ File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 11.
 )
-(./code/simpsonAdattativa.m [31])
+(./code/simpsonAdattativa.m [29])
 Underfull \vbox (badness 3803) has occurred while \output is active []
 
- [32]
+ [30]
 Underfull \vbox (badness 2460) has occurred while \output is active []
 
- [33])
-[34]
+ [31])
+[32]
 \openout2 = `Capitolo5.tex.aux'.
 
 
@@ -1392,12 +1384,12 @@ Capitolo 6.
 LaTeX Font Info:    Try loading font information for U+eus on input line 11.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/ueus.fd
 File: ueus.fd 2013/01/14 v3.01 Euler Script
-) [35
+) [33
 
 
 
-] [36]
-[37] [38] [39] [40] [41]) [42]
+] [34]
+[35] [36] [37] [38] [39]) [40]
 \openout2 = `Capitolo6.tex.aux'.
 
 
@@ -1409,14 +1401,14 @@ No file Capitolo6.tex.tex.
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 26387 strings out of 493117
- 488459 string characters out of 6135433
- 694253 words of memory out of 5000000
- 29274 multiletter control sequences out of 15000+600000
+ 26466 strings out of 493117
+ 490869 string characters out of 6135433
+ 695244 words of memory out of 5000000
+ 29363 multiletter control sequences out of 15000+600000
  19504 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,24n,54p,10448b,1703s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1455,10 +1447,10 @@ type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2014/texmf-dist/font
 s/type1/public/amsfonts/latxfont/lcircle1.pfb></usr/local/texlive/2014/texmf-di
 st/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2014/texm
 f-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on Elaborato.pdf (42 pages, 419011 bytes).
+Output written on Elaborato.pdf (40 pages, 412631 bytes).
 PDF statistics:
- 282 PDF objects out of 1000 (max. 8388607)
- 201 compressed objects within 3 object streams
+ 275 PDF objects out of 1000 (max. 8388607)
+ 197 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

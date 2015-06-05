@@ -1,0 +1,356 @@
+\documentclass[20pt,a4paper]{book}
+\usepackage{amsmath}
+
+\usepackage[italian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+
+\begin{document} 
+\textbf{\Large{Esercizio 2.1 }} Definire una procedura iterativa basata sul metodo di Newton
+per determinare \begin{math}\sqrt{\alpha}\end{math}, per un assegnato \begin{math}\alpha \end{math} > 0. Costruire una tabella delle
+approssimazioni relativa al caso \begin{math}\alpha = x_{0} \end{math} = 2. Comparare, infine, con la tabella:
+
+\vspace{3mm}
+
+\begin{tabular}{|l|l|l|l|}
+\hline
+n & xn \\
+\hline
+0 & 2 \\
+\hline
+1 & 1.5 \\
+\hline
+2 & 1.416666666666...\\
+\hline
+3 & 1.414215686274...\\
+\hline
+4 & 1.414213562374...\\
+\hline
+\end{tabular}
+
+\vspace{3mm}
+che rappresenta le approssimazioni di \begin{math} \sqrt{2} \end{math} fornite da \begin{math} x_{n+1}=\frac{1}{2}(x_{n}+\frac{2}{x_{n}})\end{math}, n=0,1,2..., x_{0}=2.
+
+
+\textit{Soluzione}
+Per calcolare \sqrt{\alpha} si considera la funzione f(x)=x^{2}-\alpha dato che si annulla per x=\sqrt{\alpha} e x=-\sqrt{\alpha}. Sappiamo che la derivata prima è f'(x)= 2x.
+
+\\Utilizzando questa funzione diventa, l'iterazione del metodo di Newton diventa:
+
+\begin{math}
+x_{i+1}=x_{i}-\frac{f(x_{i})}{f'(x_{i})}=x_{i}-\frac{x_{i}^{2}-\alpha}{2x_{i}}=x_{i}-\frac{x_{i}(x_{i}-\frac{\alpha}{x_{i}})}{2x_{i}}=\frac{2x_{i}-x_{i}+\frac{\alpha}{x_{i}}}{2}=\frac{1}{2}(x_{i}+\frac{\alpha}{x_{i}})\end{math} per \begin{math}i=0,1,2..\end{math}
+
+L'esecuzione di tale metodo, con \begin{math} \alpha= 2= x_{0}=2 \end{math} produce le seguenti approssimazioni:
+
+\vspace{2mm}
+
+\begin{tabular}{|l|l|l|l|}
+\hline
+0 & 2.00000000000000\\
+\hline
+1 & 1.50000000000000\\
+\hline
+2 & 1.41666666666667\\
+\hline
+3 & 1.41421568627451\\
+\hline
+4 & 1.41421356237469\\
+\hline
+5 & 1.41421356237309\\
+\hline
+\end{tabular}
+
+\vspace{2mm}
+
+\\L'algoritmo termina alla sesta iterazione, con un'approssimazione di \begin{math}\sqrt{2}\end{math} dell'ordine di 10^{-16}.
+
+
+
+\vspace{10mm}
+
+
+\textbf{\Large{Esercizio 2.2 }} Generalizzare il risultato del precedente esercizio, derivando una
+procedura iterativa basata sul metodo di Newton per determinare \begin{math} ^{n}\sqrt{\alpha} \end{math} per un assegnato \begin{math} \alpha \end{math}>0.
+
+\textit{Soluzione}
+In questo caso scegliamo come funzione \begin{math} f(x)=x^{n}-\alpha \end{math}, la quale si annulla per x=\begin{math}^{n}\sqrt{\alpha}\end{math} e la cui derivata vale \begin{math} f'(x)=nx^{n-1}\end{math}.
+\\Considerando la procedure iterativa del metodo di Newton, ricaviamo: \\
+
+
+\begin{math} x_{i+1}=x_{i}-\frac{f(x_{i})}{f'(x_{i})}=x_{i}-\frac{x^{n}-\alpha}{nx^{n-1}}=
+\frac{nx_{i}^{n}-x_{i}^{n}+\alpha}{nx_{i}^{n-1}}=(\frac{1}{n})((n-1)x_{i}+\frac{\alpha}{x_{i}^{n-1}})\end{math}
+
+\vspace{10mm}
+
+
+
+\textbf{\Large{Esercizio 2.3 }} In analogia con quanto visto nell' esercizio 2.1, definire una procedura iterativa basata sul metodo delle secanti per determinare \begin{math} \sqrt{\alpha} \end{math}. Confrontare con l'esercizio 1.4.
+
+\textit{Soluzione}
+Si considera la funzione  \begin{math}f(x)=x^{2}-\alpha\end{math}, che si annulla in \begin{math} x=\sqrt{\alpha}\end{math} e \begin{math} x=-\sqrt{\alpha}\end{math}.
+
+Considerando il metodo iterativo delle secanti, ricaviamo: \\
+
+\begin{math} x_{i+1}=\frac{f(x_{i})x_{i-1}-f(x_{i-1})x_{i}}{f(x_{i})-f(x_{i-1})}=
+\frac{(x_{i}^{2}-\alpha)x_{i-1}-(x_{i-1}^{2}-\alpha)x_{i}}{x_{i}^{2}-\alpha-x_{i-1}^{2}+\alpha}=
+ \frac{x_{i}^{2}x_{i-1}-\alpha x_{i-1}-x_{i-1}^{2}x_{i}+\alpha x_{i}}{x_{i}^{2}-x_{i-1}^{2}}= \\
+\frac{x_{i}x_{i-1}(x_{i}-x_{i-1})+\alpha(x_{i}-x_{i-1})}{(x_{i}-x_{i-1})(x_{i}+x_{i-1})}=
+\frac{(x_{i}-x_{i-1})(x_{i}x_{i-1}+\alpha)}{(x_{i}-x_{i-1})(x_{i}+x_{i-1})}=\frac{x_{i}x_{i-1}+\alpha}{x_{i}+x_{i-1}} \end{math}  con i=0,1,2.. 
+
+\vspace{2mm}
+
+Con l'esecuzione del metodo, scegliendo \begin{math} \alpha= x_{0}=2 \end{math} si ottengono tali approssimazioni con una tolleranza pari alla precisione di macchina: \\
+
+
+\vspace{2mm}
+
+\begin{tabular}{|l|l|l|l|}
+\hline
+i & x_{i}\\
+\hline
+0 & 2 \\
+\hline
+1 & 1.5 \\
+\hline
+2 & 1.428571428571429.. \\
+\hline
+3 & 1.414634146341463.. \\
+\hline
+4 & 1.414215686274510.. \\
+\hline
+5 & 1.414213562688869.. \\
+\hline
+6 & 1.414213562373095.. \\
+\hline
+7 & 1.414213562373095.. \\
+\hline
+\end{tabular}
+
+
+\vspace{2mm}
+
+Osservando i valori, si nota che la convergenza risulta piu' lenta rispetto al metodo di Newton dell’ esercizio 2.1. Dalla sesta iterazione in poi, l'algoritmo termina fornendo un'approssimazione con un errore dell'ordine di 10^{-16}.
+
+
+\vspace{10mm}
+
+\textbf{\Large{Esercizio 2.4 }} Discutere la convergenza del metodo di Newton, applicato
+per determinare le radici dell'equazione \begin{math}x^{3}-5x \end{math} , in funzione della scelta del punto iniziale \begin{math}x_{0}\end{math}.
+
+\textit{Soluzione}
+La funzione \begin{math}f(x)= x^{3}-5x\end{math} ha tre radici:\\
+\begin{math} x_{0}=0, x_{1}=\sqrt{5}, x_{2}=-\sqrt{5}\end{math}.
+Se scegliamo come punto di innesto 1 o -1 il metodo non converge e applichiamo il metodo di Newton, possiamo notare che questo non converge.
+
+\\ \begin{math} x_{0}=-1\end{math}\\
+\vspace{2mm}
+
+\begin{tabular}{|l|l|l|l|}
+\hline
+i & x_{i}\\
+\hline
+1 & -1 \\
+\hline
+2 & 1 \\
+\hline
+3 & -1 \\
+\hline
+4 & 1 \\
+\hline
+\end{tabular}
+
+
+\vspace{2mm}
+
+
+\begin{math} x_{0}=1\end{math}\\
+
+\vspace{2mm}
+
+\begin{tabular}{|l|l|l|l|}
+\hline
+i & x_{i}\\
+\hline
+1 & 1 \\
+\hline
+2 & -1 \\
+\hline
+3 & 1 \\
+\hline
+4 & -1 \\
+\hline
+\end{tabular}
+
+ 
+\vspace{2mm} 
+ 
+Se invece il punto di innesto e' ad esempio 2, si ha la convergenza al valore 2.23...
+
+\begin{math} x_{0}=2\end{math} \\
+
+\vspace{2mm} 
+
+\begin{tabular}{|l|l|l|l|}
+\hline
+i & x_{i}\\
+\hline
+1 & 2.237639989074023 \\
+\hline
+2 & 2.236069632529971 \\
+\hline
+3 & 2.236067977501627 \\
+\hline
+4 & 2.236067977499790 \\
+\hline
+\end{tabular}
+
+
+\vspace{10mm}
+
+\textbf{\Large{Esercizio 2.6}} E' possibile, nel caso delle funzioni del precedente esercizio, utilizzare il metodo di bisezione per determinare lo zero?
+
+\textit{Soluzione}
+Le funzioni del precedente esercizio sono sempre positive e si annullano in x=1. Visto che non si verifica la condizione f(a)f(b)< 0 per qualche a,b (Teorema degli Zeri), non e' possibile utilizzare il metodo di bisezione.
+
+\vspace{10mm}
+
+
+
+\textbf{\Large{Esercizio 2.7}} Costruire una tabella in cui si comparano, a partire dallo stesso punto iniziale x0=0, e per valori decrescenti della tolleranza \textbf{tolx}, il numero di iterazioni richieste per la convergenza dei metodi di Newton, corde e secanti, utilizzati per determinare lo zero della funzione \begin{math}f(x)=x-cos(x) \end{math}
+
+\textit{Soluzione}
+
+\begin{tabular}{|l|l|l|l|}
+\hline
+tolx & Newton & Corde & Secanti\\
+\hline
+\begin{math}10^{-1}\end{math} & x = 0:73911 , i = 2 & x = 0:70137 , i = 5 & x = 0:7363 , i = 2\\
+\hline
+\begin{math}10^{-2}\end{math} & x = 0:73909 , i = 3 & x = 0:7356 , i = 11 & x = 0:73912 , i = 3\\
+\hline
+\begin{math}10^{-3}\end{math} & x = 0:73909 , i = 3 & x = 0:73876 , i = 17 & x = 0:73909 , i = 4\\
+\hline
+\begin{math}10^{-4}\end{math} & x = 0:73909 , i = 3 & x = 0:73905 , i = 23 & x = 0:73909 , i = 4\\
+\hline
+\begin{math}10^{-5}\end{math} & x = 0:73909 , i = 4 & x = 0:73908 , i = 29 & x = 0:73909 , i = 5\\
+\hline
+\begin{math}10^{-6}\end{math} & x = 0:73909 , i = 4 & x = 0:73909 , i = 34 & x = 0:73909 , i = 5\\
+\hline
+\begin{math}10^{-7}\end{math} & x = 0:73909 , i = 4 & x = 0:73909 , i = 40 & x = 0:73909 , i = 5\\
+\hline
+\begin{math}10^{-8}\end{math} & x = 0:73909 , i = 4 & x = 0:73909 , i = 46 & x = 0:73909 , i = 6\\
+\hline
+\begin{math}10^{-9}\end{math} & x = 0:73909 , i = 4 & x = 0:73909 , i = 52 & x = 0:73909 , i = 6\\
+\hline
+\begin{math}10^{-10}\end{math} & x = 0:73909 , i = 5 & x = 0:73909 , i = 58 & x = 0:73909 , i = 6\\
+\hline
+\begin{math}10^{-11}\end{math} & x = 0:73909 , i = 5 & x = 0:73909 , i = 64 & x = 0:73909 , i = 6\\
+\hline
+\begin{math}10^{-12}\end{math} & x = 0:73909 , i = 5 & x = 0:73909 , i = 69 & x = 0:73909 , i = 6\\
+\hline
+\begin{math}10^{-13}\end{math} & x = 0:73909 , i = 5 & x = 0:73909 , i = 75 & x = 0:73909 , i = 7\\
+\hline
+\begin{math}10^{-14}\end{math} & x = 0:73909 , i = 5 & x = 0:73909 , i = 81 & x = 0:73909 , i = 7\\
+\hline
+\begin{math}10^{-15}\end{math} & x = 0:73909 , i = 5 & x = 0:73909 , i = 87 & x = 0:73909 , i = 7\\
+\hline
+\end{tabular}
+
+\vspace{2mm}
+
+I metodi di Newton e delle secanti convergono molto rapidamente alla soluzione, rispetto al metodo delle corde. Se pero' si osserva il tempo di esecuzione, si deduce che i metodi delle corde e delle secanti hanno un tempo di esecuzione medio per step inferiore.
+
+\vspace{10mm}
+
+\textbf{\Large{Esercizio 2.8}} Completare i confronti del precedente esercizio inserendo quelli con il metodo di bisezione, con intervallo di confidenza [0,1]? 
+
+\textit{Soluzione}
+La seguente tabella contiene i risultati dell’esecuzione del metodo di bisezione con intervallo
+di confidenza iniziale [0, 1]:
+
+\begin{math} f(x)=x-cos(x)\end{math}\\
+
+\begin{tabular}{|l|l|l|l|}
+\hline
+tolx & approssimazione & iterazioni\\
+\hline
+\begin{math}10^{-1}\end{math} & x = 0.75 & i = 1\\
+\hline
+\begin{math}10^{-2}\end{math} & x = 0.7344 & i = 5\\
+\hline
+\begin{math}10^{-3}\end{math} & x = 0.7383 & i = 8\\
+\hline
+\begin{math}10^{-4}\end{math} & x = 0.7390 & i = 11\\
+\hline
+\begin{math}10^{-5}\end{math} & x = 0.7391 & i = 15\\
+\hline
+\begin{math}10^{-6}\end{math} & x = 0.7391 & i = 18\\
+\hline
+\begin{math}10^{-7}\end{math} & x = 0.7391 & i = 19\\
+\hline
+\begin{math}10^{-8}\end{math} & x = 0.7391 & i = 23\\
+\hline
+\begin{math}10^{-9}\end{math} & x = 0.7391 & i = 27\\
+\hline
+\begin{math}10^{-10}\end{math} & x = 0.7391 & i = 29\\
+\hline
+\begin{math}10^{-11}\end{math} & x = 0.7391 & i = 34\\
+\hline
+\begin{math}10^{-12}\end{math} & x = 0.7391 & i = 38\\
+\hline
+\begin{math}10^{-13}\end{math} & x = 0.7391 & i = 40\\
+\hline
+\begin{math}10^{-14}\end{math} & x = 0.7391 & i = 43\\
+\hline
+\begin{math}10^{-15}\end{math} & x = 0.7391 & i = 48\\
+\hline
+\end{tabular}
+
+\vspace{2mm}
+
+In questo caso il metodo di bisezione converge piu' lentamente dei metodi di Newton e delle secanti, ma
+anche piu' rapidamente rispetto al metodo delle corde.\\
+Nonostante questo, il metodo di bisezione ha un minor costo computazionale rispetto ai metodi delle secanti e di Newton.
+
+
+\vspace{10mm}
+
+\textbf{\Large{Esercizio 2.9}} Quali controlli introdurreste, negli Algoritmi 2.4-2.6, al fine di rendere piu' "robuste" le corrispondenti iterazioni?
+
+\textit{Soluzione}
+
+Nel metodo di Newton si dovrebbe inserire un controllo sulla derivata f'(x): quest'ultima infatti deve essere diversa da 0, perche' altrimenti avremmo una divisione con denominatore nullo e si verrebbe a verificare un errore.
+
+if ( f1x==0) 
+error (La derivata deve essere diversa da 0);
+end
+
+\vspace{3mm}
+
+Per quanto riguarda il metodo delle secanti, vogliamo evitare anche in questo caso una divisione con denominatore nullo. Quindi imponiamo che fx-fx0 sia diverso da 0.
+
+if (fx-fx0==0) 
+error (Denominatore uguale a 0);
+end
+
+\vspace{3mm}
+
+Nell'algoritmo di Aitken, deve essere imposto che x-2*x1+x0 sia diverso da zero.
+
+if (x-2*x1+x0==0) 
+error (Denominatore uguale a 0);
+end
+
+\vspace{3mm}
+
+Infine, si possono aggiungere dei controlli sul numero massimo di iterazioni eseguite e sull' errore commesso (rispetto ad un tolx fissato).
+
+
+\vspace{10mm}
+
+\end{document} 
+
+
+
+
+ 

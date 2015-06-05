@@ -1,0 +1,293 @@
+
+\documentclass[20pt,a4paper]{book}
+\usepackage{amsmath}
+
+\usepackage[italian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+
+\begin{document}  %INIZIO DOCUMENTO
+
+\textbf{\Large{Esercizio 3.2}}
+Dimostrare che la somma ed il prodotto di matrici triangolari inferiori (superiori),
+e' una matrice triangolare inferiore (superiore).
+
+
+\textit{Soluzione}\\
+\begin{center}
+ SOMMA:
+ \end{center} \\
+In questo caso, si esegue la somma tra gli elementi con gli stessi indici di riga e di colonna delle due matrici di partenza. Di conseguenza, nelle posizioni in cui queste hanno elementi nulli, avremo degli zeri anche nella matrice somma, che sara' percio' triangolare (inferiore/superiore).\\
+
+\begin{center}
+PRODOTTO: \\
+\end{center}
+Se A e' una matrice quadrata, sappiamo che \begin{math} a_{ij}=0 \forall i<j \end{math}.\\
+Di conseguenza:\\
+\begin{math} c_{ij}=\Sigma_{k=1}^{n}a_{ik}b_{kj}=\Sigma_{k=1}^{j-1}a_{ik}b_{kj}+\Sigma_{k=i+1}^{n}a_{ik}b_{kj}+\Sigma_{k=i+1}^{j-1}a_{ik}b_{kj}=0\end{math} \begin{math}  \forall  i<j \end{math}\\
+dato che:\\ \begin{math} \Sigma_{k=1}^{j-1}a_{ik}b_{kj}=\Sigma_{k=i+1}^{j-1}a_{ik}b_{kj}=\Sigma_{i+1}^{n}=0\end{math} \begin{math}  \forall  i<j \end{math}
+
+\vspace{10mm}
+
+
+
+
+\textbf{\Large{Esercizio 3.3}}
+Dimostrare che il prodotto di due matrici triangolari inferiori(superiori) a diagonale
+unitaria è a sua volta una matrice triangolare inferiore(superiore) a diagonale unitaria.
+
+\textit{Soluzione}
+
+Sfruttando il risultato dell'esercizio precedente, resta solo da dimostrare che la diagonale della matrice (ottenuta con il prodotto) e' unitaria.
+
+\begin{math} c_{ij}=\Sigma_{k=1}^{n}a_{ik}b_{kj}=a_{ii}+b_{ii}+ \Sigma_{k=1}^{i-1}a_{ik}b_{kj}+ \Sigma_{k=i+1}^{n}a_{ik}b_{kj}=1 \end{math}
+
+dato che: \begin{math} \Sigma_{k=1}^{i-1}b_{kj}=0\end{math} e   \begin{math}\Sigma_{k=i+1}^{n}a_{ik}=0\end{math}
+
+
+\vspace{10mm}
+
+\textbf{\Large{Esercizio 3.5}}  
+Dimostrare i lemmi 3.2 e 3.3.
+
+\textit{Soluzione}
+\\-Dimostrazione lemma 3.2\\
+Sia A \begin{math}\in\Re^{nxn}\end{math} una matrice triangolare e nonsingolare.\\
+\\\begin{math}\ \Rightarrow \end{math}
+\\Il determinante di una matrice triangolare si ottiene effettuando il prodotto degli elementi della diagonale; se ci fosse un minore principale nullo, quindi un qualche \begin{mah} a_{ii}=0\end{math}, il determinante della matrice A sarebbe nullo, ma questo contraddirebbe l'ipotesi di nonsingolarita'.
+
+\\\begin{math}\ \Leftarrow \end{math}
+\\Se tutti i minori principali della matrice triangolare A sono non nulli, allora risulta che il determinante è diverso da zero (dato che questo si calcola moltiplicando tra loro gli elementi diagonali).
+
+\vspace{2mm}
+
+
+\\ -Dimostrazione lemma 3.3\\
+Sia A una matrice fattorizzabile LU, cioe' tale che A=LU.
+Sia \begin{math}A_{k}\end{math} una sottomatrice di A di ordine k, tale che \begin{math} det(A_{k})=det(U_{k})\end{math}.
+
+Ma \begin{math}A_{k}= \begin{bmatrix}\ I_{k} & 0 \end{bmatrix} \begin{bmatrix}\ A_{k} & | & A_{k1}  \\
+--- & --- & --- \\
+A_{k2} & | & A_{k3} \end{bmatrix}
+\begin{bmatrix}\ I_{k} \\ 0 \end{bmatrix}=\\
+\begin{bmatrix}\
+\begin{bmatrix}\ I_{k} & 0 \end{bmatrix} & \begin{bmatrix}\ L_{k} & | & 0  \\
+--- & --- & --- \\
+L_{k1} & | & L_{k2} \end{bmatrix} \end{bmatrix}  \begin{bmatrix}\ \begin{bmatrix}\ U_{k} & | & U_{k1}  \\
+--- & --- & --- \\
+0 & | & U_{k2} \end{bmatrix} & \begin{bmatrix}\ I_{k} \\ 0 \end{bmatrix} \end{bmatrix}
+ \end{math}
+
+\\Si ricava percio': \begin{math}
+\begin{bmatrix}\ L_{k} & | & 0 \end{bmatrix} \begin{bmatrix}\ U_{k} \\ 0 \end{bmatrix}=L_{k}U_{k}  \end{math}
+
+\\ Ma \begin{math} det(A_{k})=det(L_{k}U_{k})=det(L_{k})det(U_{k})=det(U_{k})  \end{math}
+\\ dato che \begin{math} L_{k} \end{math} è una matrice triangolare con diagonale unitaria, con determinante uguale a 1.
+
+\vspace{10mm}
+
+
+\textbf{\Large{Esercizio 3.6}}
+Dimostrare che il numero di \textbf{flop} richiesti dall'Algoritmo 3.5 e' dato da \begin{math}\approx\frac{2}{3}n^{3}\end{math} flop.
+
+
+\textit{Soluzione}
+L'algoritmo viene ripetuto per i=n-1 volte. Ad ogni iterazione vengono eseguite (n-1) divisioni per calcolare il vettore di Gauss, e \begin{math}(n-1)^{2}\end{math} moltiplicazioni (per ottenere \begin{math}L_{i}\end{math}) e altrettante divisioni (per ricavare \begin{math}A^{i+1}\end{math}).
+\\ Di conseguenza il costo computazionale risulta:
+\begin{math}\Sigma_{i=1}^{n-1}[(n-i)+2(n-i)^{2}]=\Sigma_{k=1}^{n-1}i+2\Sigma_{k=1}^{n-1}i^{2}=\frac{n(n-1)}{2}+\frac{n(n-1)(2n-1)}{6}\approx\frac{2}{3}n^{3}flop. \end{math}
+
+
+\vspace{10mm}
+
+\textbf{\Large{Esercizio 3.9}}   
+Dimostrare i lemmi 3.4 e 3.5.
+
+\textit{Soluzione}
+\\-Lemma 3.4: "Se una matrice A e' diagonale dominante per righe (rispettivamente
+per colonne), allora tali sono tutte le sue sottomatrici principali".
+\\Dimostrazione:
+
+Se A e' una matrice diagonale dominante per righe, vale la seguente relazione:
+\\\begin{math}|a_{ii}|>\Sigma_{j=1,j\neq i}^{n}|a_{ij}| \geq \Sigma_{j=1,j\neq i}^{k}|a_{ij}| \end{math}
+
+\\con \begin{math} k\leqn \end{math}.
+\\Sia \begin{math} A_{k}\end{math} una generica sottomatrice di A di ordine k. Utilizzando la disuguaglianza begin{math} k\leqn \end{math}, l'asserto risulta verificato.
+
+\vspace{5mm}
+
+\\-Lemma 3.5: "Una matrice A e' diagonale dominante per righe (rispettivamente,
+per colonne)\begin{math}\Leftrightarrow A^{T}\end{math} e' diagonale dominante per colonne (rispettivamente, per righe)".
+\\Dimostrazione:
+
+La trasposta di una matrice A si ottiene invertendo gli indici di riga e colonna, rispettivamente i e j (gli elementi della diagonale rimangono invariati).
+Se in A vale la relazione:
+\\\begin{math}|a_{ii}|>\Sigma_{j=1,j\neqi}^{n}|a_{ij}|\end{math}
+
+\\allora in \begin{math} A^{T}\end{math} si avra' che:
+\\\begin{math}|a_{ii}|>\Sigma_{j=1,j\neqi}^{n}|a_{ji}|\end{math}
+\\quindi la matrice e' diagonale dominante per colonne.
+
+\vspace{5mm}
+
+\\\textit{"Se una matrice \begin{math} A^{T}\end{math} e' diagonale dominante per colonne (rispettivamente, per righe) \begin{math}\Rightarrow A^{T}\end{math} A e' diagonale dominante per righe (rispettivamente,
+per colonne)."} 
+\\La dimostrazione e' analoga a quella appena riportata.
+
+\vspace{10mm}
+
+\textbf{\Large{Esercizio 3.10}}
+Completare la dimostrazione del teorema 3.6.
+
+\textit{Soluzione}
+
+\\-Teorema 3.6: Se A=LD\begin{math}L^{T}\Leftrightarrow \end{math} A e' SDP.
+\\Dimostrazione:
+\vspace{5mm}
+
+Per prima cosa, dimostriamo che A e' simmetrica. Infatti:
+
+\\ \begin{math} A^{T}=(LDL^{T})^{T}=LD^{T}L^{T}\end{math}
+\\ma \begin{math} D^{T}=D\end{math} in quanto diagonale, quindi:
+\\ \begin{math} A^{T}=(LDL^{T})^{T}=LD^{T}L^{T}=LDL^{T}=A\end{math}
+
+\vspace{5mm}
+
+\\Successivamente dimostriamo che A e' definita positiva:
+\\ \begin{math} \forall \underline{x}\in\Re t.c. \underline{x}\neq 0 \end{math} abbiamo \begin{math}   \underline{x}^{T}A\underline{x}=\underline{x}^{T}LDL^{T}\underline{x}=(\underline{x}^{T}L)D(L^{T}\underline{x})=(L^{T}\underline{x})^{T}D(\underline{x}^{T}L)^{T}\end{math}.
+\\Ponendo \begin{math} \underline{y}=L^{T}\underline{x} t.c. \underline{y}\neq 0\end{math}, dato che L e' nonsingolare e \begin{math} \underline{x}\neq 0 \end{math}, si ottiene:
+\\ \begin{math} \underline{y}^{T}D\underline{y}\end{math}.
+\\In conclusione, dato che gli elementi diagonali della matrice D sono tutti positivi, si ha che:
+\\\begin{math} \underline{x}^{T}D\underline{x}=\underline{y}^{T}D\underline{y}=\Sigma_{i=1}^{n}d_{i}y_{i}^{2}>0\end{math}
+
+
+
+\vspace{10mm}
+
+
+\textbf{\Large{Esercizio 3.11}} 
+Dimostrare che, se A e' nonsingolare, le matrici \begin{math}A^{T}A\end{math} e \begin{math} AA^{T}A\end{math}sono sdp.
+
+\textit{Soluzione}
+
+1)
+\begin{math}A^{T}A\end{math} e' sdp:\\
+\begin{math}(A^{T}A)^{T}=A^{T}(A^{T})^{T}=A^{T}A\end{math} quindi e' simmetrica\\
+
+ponendo \underline{y}=A\underline{x}, \begin{math}\underline{x}^{T}A^{T}A\underline{x}\end{math} diventa \begin{math}\underline{y}^{T}\underline{y}=\Sigma_{i=1}^{n}y_{i}^{2}>0\end{math} quindi e' positiva \\
+
+2)
+\begin{math}AA^{T}\end{math} e' sdp:\\
+\begin{math}(AA^{T})^{T}=(A^{T})^{T}A^{T}=AA^{T}\end{math} quindi e' simmetrica\\
+
+ponendo \underline{y}=A^{T}\underline{x}, \begin{math}\underline{x}^{T}AA^{T}\underline{x}\end{math} diventa \begin{math}\underline{y}^{T}\underline{y}=\Sigma_{i=1}^{n}y_{i}^{2}>0\end{math} quindi e' positiva. 
+
+\vspace{10mm}
+
+
+\textbf{\Large{Esercizio 3.12}}   %CONTROLLAREEEEE
+Dimostrare che se A\begin{math}\in\Re^{mxn}\end{math} con \begin{math}m\geqnn=rank(A)\end{math}
+allora la matrice \begin{math}\A^{T}A\end{math} e' sdp.
+
+\textit{Soluzione}
+
+1) \begin{math}(A^{T}A)=(A^{T}A)^{T}=A^{T}(A^{T})^{T}=A^{T}A\end{math} quindi e' simmetrica
+
+2) \begin{math} \begin{math}\forall\underline{x}\neq0 \underline { x}^{T}A^{T}A\underline{x}\end{math} ponendo y=Ax si ottiene
+\underline{y}^{T}\underline{y}=\parallely\parallel_{2}^{2}\geq0 \end{math}. Questa quantita' vale 0 solo nel caso in cui \begin{math} \underline{y}=0\end{math}, condizione che pero' non si verifica poiche' il rango della matrice e' massimo.
+
+\vspace{10mm}
+
+
+\textbf{\Large{Esercizio 3.13}} 
+Data una matrice A \begin{math} A \in \Re^{nxn}\end{math}, dimostrare che essa puo' essere scritta come \begin{center}
+A=\begin{math}\frac{1}{2}(A+A^{T})+\frac{1}{2}(A-A^{T})\equiv A_{s}+A_{a}\end{math},
+\end{center}
+\\dove \begin{math} A_{s}=A_{s}^{T}\end{math}, mentre \begin{math} A_{a}=-A_{a}^{T}\end{math} e' detta parte antisimmetrica di A. Dimostrare inoltre che, dato un generico vettore \begin{math} x\in \Re^{n}\end{math} risulta 
+\begin{center}
+\begin{math} x^{T}Ax = x^{T}A_{s}x\end{math}.
+\end{center}
+
+\textit{Soluzione}
+Per prima cosa dimostriamo che \begin{math}A_{s}\end{math} e' simmetrica.
+\\ \begin{math}\frac{1}{2}(A+A^{T})=(\frac{1}{2}(A+A^{T}))^{T}=\frac{1}{2}((A+A^{T})^{T})=\frac{1}{2}(A^{T}+A)=\frac{1}{2}(A+A^{T})\end{math}.
+
+\\Adesso dimostriamo che \begin{math}A_{a}\end{math} e' antisimmetrica.
+\\ \begin{math}\frac{1}{2}(A-A^{T}))^{T}=\frac{1}{2}(A^{T}-(A^{T})^{T}))=\frac{1}{2}(A^{T}-A)= -\frac{1}{2}(A-A^{T})\end{math}.
+
+\\Sfruttando le due relazioni appena ricavate, si ottiene che:
+A=\begin{math}\frac{1}{2}(A+A^{T})+\frac{1}{2}(A-A^{T})\equiv A_{s}+A_{a}\end{math}
+
+A questo punto dobbiamo dimostrare che \begin{math} \underline{x}^{T}A\underline{x}= \underline{x}^{T}A_{s}\underline{x}\end{math} con \begin{math}\underline{x}\in\Re^{n}\end{math}.
+
+\\ Dato che \begin{math}\underline{x}^{T}A\underline{x}= \underline{x}^{T}(A_{s}+A_{a})\underline{x}=\underline{x}^{T}A_{s}\underline{x}+\underline{x}^{T}A_{a}\underline{x}\end{math} e' sufficiente dimostrare che \begin{math}\underline{x}^{T}A_{a}\underline{x}=0\end{math}.
+
+\\Ma \begin{math}\underline{x}^{T}A_{a}\underline{x}=\frac{1}{2}(\underline{x}^{T}A^{T}\underline{x}-\underline{x}^{T}A\underline{x})\end{math}
+
+\\ Il prossimo passo consiste nel verificare che tale differenza e' uguale a 0.
+
+\begin{math}\underline{x}^{T}A^{T}\underline{x}=\Sigma_{j=1}^{n}x_{j}\Sigma_{k=1}^{n}a_{ik}x_{k}=(x_{1}\Sigma_{k=1}^{n}a_{1k}x_{k})+...+(x_{n}\Sigma_{k=1}^{n}a_{nk}x_{k})=\Sigma_{j=1}^{n}x_{j}(x_{1}a_{1j}+...+x_{n}a_{nj})=\Sigma_{j=1}^{n}x_{j}\Sigma_{k=1}^{n}x_{k}a_{kj}=\Sigma_{j=1}^{n}x_{j}\Sigma_{k=1}^{n}a_{kj}x_{k}=\underline{x}^{T}A\underline{x}\end{math}.
+
+\vspace{10mm}
+
+\textbf{\Large{Esercizio 3.15}} 
+Dimostrare che il numero di flop richiesti dall'algoritmo di fattorizzazione \begin{math}LDL^{T}\end{math} e' \begin{math}\approx \frac{1}{3}n^{3}\end{math}.
+
+\textit{Soluzione}
+Per calcolare L si devono eseguire j-1 somme di due prodotti, una sottrazione ed una divisione con un costo di 2(j-1) + 2 = 2j flops. Tale calcolo dovra' essere eseguito per un totale di n-j volte per ciascuna colonna, essendo L una matrice triangolare.
+Di conseguenza il costo computazionale sara':
+\\ \begin{math}2\Sigma_{j=1}^{n}(n-j)j=2n\Sigma_{j=1}^{n}j-2\Sigma_{j=1}^{n}j^{2}=2n\frac{n(n+1)}{2}-2\frac{n(n+1)(2n+1)}{6}\simeq n^{3}-\frac{2}{3}n^{3}=\frac{1}{3}n^{3}\end{math}flop.
+
+
+\vspace{10mm}
+
+\textbf{\Large{Esercizio 3.19}}  
+Dimostrare che, al passo i-esimo di eliminazione di Gauss
+con pivoting parziale, si ha \begin{math}a^{(i)}_{ki,i}\neq 0\end{math} se A e' nonsingolare.
+
+\textit{Soluzione}
+Utilizzando la tecnica del pivotng, all'i-esimo passo si avra' \begin{math}|a^{(i)}_{ki,i}|\equiv 
+max_{k\geq i}|a_{k,i}^{(i)}|\end{math}.
+Se si verifica che \begin{math}a^{(i)}_{ki,i}=0\end{math}, questo vuol dire che gli elementi della colonna j-esima sono tutti nulli, ma questo contraddice l'ipotesi di non singolarita'. 
+
+
+\vspace{10mm}
+
+\textbf{\Large{Esercizio 3.25}}  
+Si consideri la seguente matrice bidiagonale inferiore 10x10:
+\\A= \begin{bmatrix}\
+1 &  &  &\\
+100 & 1 & &\\
+  & \ddots & \ddots & \\
+ &  & 100 & 1\end{bmatrix}\\
+ 
+\\Calcolare \begin{math}k_{\infty}(A)\end{math}. Confrontare il risultato con quello fornito dalla function cond di Matlab. Dimostrare, e verificare, che \begin{math}k_{\infty}(A)=k_{1}(A)\end{math}.
+
+\textit{Soluzione}
+
+\\La matrice inversa di A e'
+
+\\A^{-1}== \begin{bmatrix}\
+1 &  &  &\\
+-100 & 1 & &\\
+ \vdots & \ddots & \ddots & \\
+ -100^{9}& \ldots  & -100 & 1\end{bmatrix}\\
+
+Inoltre, eseguendo i calcoli, si ottiene che:
+\\\begin{math}k_{1}(A)=||A||_{1}||A^{-1}||_{1}=101\Sigma_{i=0}^{9}100^{i}\simeq 1.0101e^{18}\end{math}
+\\\begin{math}k_{\infty}(A)=||A||_{\infty}||A^{-1}||_{\infty}=101\Sigma_{i=0}^{9}100^{i}\simeq 1.0101e^{18}\end{math}
+\\Come si puo' notare, la matrice e' mal condizionata.
+A maggior riprova che tale problema e' malcondizionato, eseguendo \textit{cond} con Matlab, si ha come risultato: ans=Inf.
+
+
+\vspace{10mm}
+
+
+
+
+
+\end{document} 
+
+
+
+
+ 

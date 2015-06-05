@@ -5,13 +5,28 @@
 \usepackage{mathtools}
 \usepackage{epigraph}
 \usepackage{listings}
+\usepackage[object=vectorian]{pgfornament}
 \usepackage{amsfonts, mathtools, placeins, floatflt, xfrac, multirow, indentfirst, fancyhdr,
             amssymb, latexsym, amsthm, eucal, float, tabularx, mdframed, bigdelim, blkarray,
-            relsize, lettrine, xcolor, tikz, caption, geometry, perpage}
+            relsize, lettrine, xcolor,lipsum, tikz, caption, geometry, perpage}
 
 \newenvironment{sol}{
 	\proof[\emph{Soluzione}]\mbox{}\\*
 }{\endproof}
+
+\newcommand{\sectionline}[2]{%
+  \nointerlineskip \vspace{.5\baselineskip}\hspace{\fill}
+  {\color{#1}
+    \resizebox{0.5\linewidth}{2ex}
+    {{%
+    {\begin{tikzpicture}
+    \node  (C) at (0,0) {};
+    \node (D) at (9,0) {};
+    \path (C) to [ornament=#2] (D);
+    \end{tikzpicture}}}}}%
+    \hspace{\fill}
+    \par\nointerlineskip \vspace{.5\baselineskip}
+  }
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -50,11 +65,6 @@
 \cleardoublepage
 
 \thispagestyle{empty}
-\vspace{\stretch{1}}
-\begin{flushright}
-\epigraph{L'errore assoluto da un informazione relativa, l'errore relativo da un informazione assoluta!}{Sestini, Brugnano, Magherini}
-\end{flushright}
-\vspace{\stretch{2}}
 \cleardoublepage
 \input{Capitolo1.tex}
 \include{Capitolo1.tex}
@@ -68,4 +78,5 @@
 \include{Capitolo5.tex}
 \input{Capitolo6.tex}
 \include{Capitolo6.tex}
+
 \end{document}

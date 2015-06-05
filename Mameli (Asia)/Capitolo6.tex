@@ -1,9 +1,7 @@
 \chapter{Calcolo del Google Pagerank}
 \label{chap:Google}
-\section{Esercizi del libro}
-\label{sec:Esercizi del libro}
 
-\subsection{Esercizio 1}
+\section{Esercizio 1}
 \label{sub:Es1}
 [Teorema di Gershgorin]
       Dimostrare che gli autovalori di una matrice
@@ -27,7 +25,9 @@
    in quanto $|x_i|\geq|x_j|$. Segue $\lambda\in\bigcup_{i=1}^{n}{\mathcal{D}_i}$ da cui $\sigma{A}\subseteq\mathcal{D}$.
 \end{sol}
 
-\subsection{Esercizio 2}
+\sectionline{black}{88}
+
+\section{Esercizio 2}
 \label{sub:Es2}
 \emph{
       Utilizzare il metodo delle potenze per approssimare l'autovalore dominante della matrice
@@ -81,7 +81,9 @@
   \end{tabular}\end{center}
 \end{sol}
 
-\subsection{Esercizio 3}
+\sectionline{black}{88}
+
+\section{Esercizio 3}
 \label{sub:es3}
 \emph{Dimostrare i Corollari 6.2 e 6.3.}
 \begin{sol}
@@ -107,7 +109,9 @@
   per il Corollario 6.2, lo splitting è regolare ed il metodo è convergente.
 \end{sol}
 
-\subsection{Esercizio 4}
+\sectionline{black}{88}
+
+\section{Esercizio 4}
 \label{sub:es4}
 \emph{Dimostrare il Teorema 6.9.}
 \begin{sol}
@@ -119,10 +123,13 @@
    inoltre, per ipotesi, $A=D-L-U$ da cui si deduce che $D=\alpha(I-diag(B))$ e $(L+U)=\alpha(B-diag(B))$.\\
   La matrice $(L+U)=\alpha(B-diag(B))$ risulta maggiore di zero in quanto $B>0\rightarrow (B-diag(B))>0$.
   La matrice $D$ ha elementi positivi sulla diagonale: supponiamo per assurdo $a_{i,i}\leq 0$:
-    l'$i$-esima riga di $A$, negativa, è data da $A\underline{e}_i\leq\underline{0}$ dato che $A$ è una M-matrice risulta
+    l'$i$-esima riga di $A$, negativa, è data da $A\underline{e}_i\leq\underline{0}$ dato che $A$ è una M-matrice ed è monotona si può scrivere
     $\underline{e}_i\leq A^{-1}\underline{0}=\underline{0}$ assurdo poiché $\underline{e}_i\geq\underline{0}, \forall i$.
 \end{sol}
-\subsection{Esercizio 5}
+
+\sectionline{black}{88}
+
+\section{Esercizio 5}
 \label{sub:es5}
 \emph{Tenendo conto della (6.10), riformulare il metodo delle potenze (6.11) per il calcolo del \textit{Google pagerank} come metodo iterativo definito da uno splitting regolare.}
 \begin{sol}
@@ -135,7 +142,9 @@
   Il metodo è convergente in quanto la matrice di iterazione ha raggio spettrale minore di $1$: $\rho(I^{-1}pS)=\rho(pS)<1$ dato che $p \in (0,1)$ e $\rho(S)=1$.
 \end{sol}
 
-\subsection{Esercizio 6}
+\sectionline{black}{88}
+
+\section{Esercizio 6}
 \label{sub:es6}
 \emph{Dimostrare che il metodo di Jacobi converge asintoticamente in un numero minore di iterazioni, rispetto al metodo delle potenze (6.11) per il calcolo del \textit{Google pagerank}.}
 \begin{sol}
@@ -145,7 +154,9 @@
    \textsl{Google pagerank}, il metodo di Jacobi converge in asintoticamente in un numero minore di iterazioni, rispetto al metodo delle potenze per il calcolo del \textsl{Google pagerank}.
 \end{sol}
 
-\subsection{Esercizio 7}
+\sectionline{black}{88}
+
+\section{Esercizio 7}
 \label{sub:es7}
 \emph{Dimostrare che, se $A$ è diagonale dominante, per riga o per colonna, il metodo di Jacobi è convergente.}
 \begin{sol}
@@ -160,7 +171,9 @@
    il risultato vale anche se $A$ è a diagonale dominante per colonne; il metodo di Jacobi è dunque convergente per matrici a diagonale dominante.
 \end{sol}
 
-\subsection{Esercizio 8}
+\sectionline{black}{88}
+
+\section{Esercizio 8}
 \label{sub:es8}
 \emph{Dimostrare che, se $A$ è diagonale dominante, per riga o per colonna, il metodo di Gauss-Seidel è convergente.}
 \begin{sol}
@@ -175,7 +188,9 @@
    dunque $|\lambda|<1$ e quindi il metodo di Gauss-Seidel è convergente per matrici a diagonale dominante.
 \end{sol}
 
-\subsection{Esercizio 9}
+\sectionline{black}{88}
+
+\section{Esercizio 9}
 \label{sub:es9}
 \emph{Se $A$ è \textit{sdp}, il metodo di Gauss-Seidel risulta essere convergente.
       Dimostrare questo risultato nel caso (assai più semplice) in cui l'autovalore di massimo modulo della matrice di iterazione sia reale.\\
@@ -201,7 +216,9 @@
   Segue $\rho(M_{GS}^{-1}N_{GS})=|\lambda|<1$.
 \end{sol}
 
-\subsection{Esercizio 10}
+\sectionline{black}{88}
+
+\section{Esercizio 10}
 \label{sub:es10}
 \emph{Con riferimento ai vettori errore (6.16) e residuo (6.17) dimostrare che, se
 			\begin{equation}
@@ -224,7 +241,9 @@
   $\kappa(A)\approx 1$ mentre risulta malcondizionata per $\kappa(A)\gg 1$.
 \end{sol}
 
-\subsection{Esercizio 11}
+\sectionline{black}{88}
+
+\section{Esercizio 11}
 \label{sub:es11}
 \emph{Calcolare il polinomio caratteristico della matrice
 			\[
@@ -243,7 +262,9 @@
   Le radici di tale polinomio sono $\lambda=\sqrt[n]{\alpha}$.
 \end{sol}
 
-\subsection{Esercizio 12}
+\sectionline{black}{88}
+
+\section{Esercizio 12}
 \label{sub:es12}
 \emph{Dimostrare che i metodi di Jacobi e Gauss-Seidel possono essere utilizzati per la risoluzione del sistema lineare (gli elementi non indicati sono da intendersi nulli)
 			\[

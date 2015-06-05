@@ -1,0 +1,56 @@
+
+\documentclass[20pt,a4paper]{book}
+
+\usepackage[italian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+
+\begin{document}  %INIZIO DOCUMENTO
+
+\textbf{\Large{Esercizio 4.1}}
+Sia f(x)=\begin{math}4x^{2}\end{math}-12x+1.\\
+Determinare \begin{math} p(x)\in\pi_{4} \end{math} che interpola f(x) sulle ascisse \begin{math}{i}=i \end{math}, i=0,...,4.
+
+\textit{Soluzione}
+Caso Lagrange:
+\\Per prima cosa si calcolano gli \begin{math}f(x_{i})\end{math} per ogni i=0,...,4:\\
+f(0)=1\\
+f(1)=-7\\
+f(2)=-7\\
+f(3)=1\\
+f(4)=17\\
+
+Adesso calcoliamo \begin{math}L_{kn}(x)\end{math} con k=0,...,4 e n=4:\\
+\begin{math}L_{04}\end{math}=\begin{math}\frac{(x-1)(x-2)(x-3)(x-4)}{24}\end{math}\\
+
+\begin{math}L_{14}\end{math}=\begin{math}\frac{(-x)(x-2)(x-3)(x-4)}{6}\end{math}\\
+\begin{math}L_{24}\end{math}=\begin{math}\frac{(x)(x-1)(x-3)(x-4)}{4}\end{math}\\
+\begin{math}L_{34}\end{math}=\begin{math}\frac{(-x)(x-1)(x-2)(x-4)}{6}\end{math}\\
+\begin{math}L_{44}\end{math}=\begin{math}\frac{(x)(x-1)(x-2)(x-3)}{24}\end{math}\\
+
+A questo punto possiamo scrivere \begin{math} p(x)\in\pi_{4} \end{math}= \begin{math}\frac{(x-1)(x-2)(x-3)(x-4)}{24}\end{math}-7\begin{math}\frac{(-x)(x-2)(x-3)(x-4)}{6}\end{math}-7\begin{math}\frac{(x)(x-1)(x-3)(x-4)}{4}\end{math}+\begin{math}\frac{(-x)(x-1)(x-2)(x-4)}{6}\end{math}+17\begin{math}\frac{(x)(x-1)(x-2)(x-3)}{24}\end{math}
+
+\vspace{2mm}
+Eseguendo i calcoli, si ottiene il polinomio \begin{math}p(x)=4x^{2}-12x+1\end{math}
+
+\vspace{10mm}
+
+
+\textbf{\Large{Esercizio 4.14}}
+Quali diventano le ascisse di Chebyshev, per un problema definito su un generico intervallo [a,b]?
+
+\textit{Soluzione}
+
+Nel caso a=-1 e b=1, la formula per il calcolo delle ascisse di Chebyshev è:
+\begin{math}\x x_{i}^{(k)}=cos(\frac{(2i+1)\pi}{2k})\end{math}  con k grado del polinomio e i=0,...,k.
+
+Nel caso generico, la formula diventa:
+\begin{math}\x x_{i}^{(k)}=\frac{a+b}{2}+\frac{b-a}{2}cos(\frac{(2i+1)\pi}{2k})\end{math}  con k grado del polinomio e i=0,...,k.
+
+
+
+\vspace{10mm}
+
+
+
+\end{document}

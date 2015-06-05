@@ -1,9 +1,7 @@
 \chapter{Formule di quadratura}
 \label{chap:Cap5}
-\section{Esercizi del libro}
-\label{sec:Esercizi del libro}
 
-\subsection{Esercizio 1}
+\section{Esercizio 1}
 \label{sub:es1}
 \emph{Calcolare il numero di condizionamento dell'integrale
 $$\int_0^{e^{21}}\sin\sqrt{x}\;dx.$$
@@ -13,7 +11,9 @@ Questo problema è ben condizionato o è malcondizionato?}
 	per cui abbiamo $\kappa=b-a=e^{21}-0=e^{21}>10^{9}$,il	problema è, quindi, mal condizionato.
 \end{sol}
 
-\subsection{Esercizio 2}
+\sectionline{black}{88}
+
+\section{Esercizio 2}
 \label{sub:es2}
 \emph{Derivare, dalla (5.5), i coefficienti della formula dei trapezi (5.6) e della formula di Simpson (5.7).}
 \begin{sol}
@@ -45,7 +45,9 @@ Questo problema è ben condizionato o è malcondizionato?}
 	\end{itemize}
 \end{sol}
 
-\subsection{Esercizio 3}
+\sectionline{black}{88}
+
+\section{Esercizio 3}
 \label{sub:es3}
 \emph{Verificare, utilizzando il risultato del Teorema (5.2) le (5.9) e (5.10).}
 \begin{sol}
@@ -65,14 +67,18 @@ Questo problema è ben condizionato o è malcondizionato?}
 	\end{itemize}
 \end{sol}
 
-\subsection{Esercizio 4}
+\sectionline{black}{88}
+
+\section{Esercizio 4}
 \label{sub:es4}
 \emph{Scrivere una \lstinline{function} \textsc{Matlab} che implementi efficientemente la formula dei trapezi composita (5.11).}
 \begin{sol}
 	\lstinputlisting[caption={Formula dei trapezi composita.}, label=lst:trapeziComposita]{code/trapeziComposita.m}
 \end{sol}
 
-\subsection{Esercizio 5}
+\sectionline{black}{88}
+
+\section{Esercizio 5}
 \label{sub:es5}
 \emph{Scrivere una \lstinline{function} \textsc{Matlab} che implementi efficientemente la formula di Simpson composita (5.13).}
 \begin{sol}
@@ -81,22 +87,27 @@ Questo problema è ben condizionato o è malcondizionato?}
 	$$I_2^{(n)}(f)=\frac{b-a}{3n}(\sum_{i=1}^{n/2}(4f_{2i-1}+2f_{2i})+f_0-f_n).$$
 \end{sol}
 
-\subsection{Esercizio 6}
+\sectionline{black}{88}
+
+\section{Esercizio 6}
 \label{sub:es6}
 \emph{Implementare efficientemente in \textsc{Matlab} la formula adattativa dei trapezi.}
 \begin{sol}
 	\lstinputlisting[caption={Formula dei trapezi adattativa.}, label=lst:trapeziAdattativa]{code/trapeziAdattativa.m}
 \end{sol}
 
-\subsection{Esercizio 7}
+\sectionline{black}{88}
+
+\section{Esercizio 7}
 \label{sub:es7}
 \emph{Implementare efficientemente in \textsc{Matlab} la formula adattativa di Simpson.}
 \begin{sol}
 	\lstinputlisting[caption={Formula di Simpson adattativa.}, label=lst:simpsonAdattativa]{code/simpsonAdattativa.m}
 \end{sol}
 
+\sectionline{black}{88}
 
-\subsection{Esercizio 8}
+\section{Esercizio 8}
 \label{sub:es8}
 \emph{Come è classificabile, dal punto di vista del condizionamento, il seguente problema?
 			$$\int_{\frac{1}{2}}^{100}-2x^{-3}\cos\left(x^{-2}\right)\;\mathrm{d}x\equiv\sin\left(10^{-4}\right)-\sin(4)$$}
@@ -108,7 +119,9 @@ Questo problema è ben condizionato o è malcondizionato?}
 	utilizzare le formule di adattative invece che le formule composite;
 \end{sol}
 
-\subsection{Esercizio 9}
+\sectionline{black}{88}
+
+\section{Esercizio 9}
 \label{sub:es9}
 \emph{Utilizzare le \lstinline{function} degli Esercizi 5.4 e 5.6 per il calcolo dell'integrale
       $$\int_{\frac{1}{2}}^{100}-2x^{-3}\cos\left(x^{-2}\right)\;\mathrm{d}x\equiv\sin\left(10^{-4}\right)-\sin(4),$$
@@ -144,8 +157,9 @@ Questo problema è ben condizionato o è malcondizionato?}
 	\end{tabular}\end{center}
 \end{sol}
 
+\sectionline{black}{88}
 
-\subsection{Esercizio 10}
+\section{Esercizio 10}
 \label{sub:es10}
 \emph{Utilizzare le \lstinline{function} degli Esercizi 5.5 e 5.7 per il calcolo dell'integrale
       $$\int_{\frac{1}{2}}^{100}-2x^{-3}\cos\left(x^{-2}\right)\;\mathrm{d}x\equiv\sin\left(10^{-4}\right)-\sin(4),$$
